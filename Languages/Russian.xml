@@ -1,0 +1,21 @@
+﻿<APPLANG>
+  <PHOTOVIEW>
+    <DESCRIPTION>Имя Окна</DESCRIPTION>
+    <DELETECONFIRM>Вы уверены, что хотите удалить эту фотографию?</DELETECONFIRM>
+    <EDIT>Удалить</EDIT>
+    <SETWALLPAPER>Выбрать Обои</SETWALLPAPER>
+    <DISPLAYNAME>ФОТО</DISPLAYNAME>
+    <THUMBSHEADER>ВИД ЭСКИЗА</THUMBSHEADER>
+    <NOPATHSET>ПУТЬ НЕ ЗАДАН В ПАРАМЕТРАХ</NOPATHSET>
+    <MYPHOTOS>МОИ ФОТО</MYPHOTOS>
+    <ROTATE>ПОВЕРНУТЬ</ROTATE>
+    <EMAILPHOTO>ФОТО ПОЧТОЙ</EMAILPHOTO>
+    <SLIDESHOW>СЛАЙДШОУ</SLIDESHOW>
+    <VIEW>ВИД</VIEW>
+  </PHOTOVIEW>
+  <SETUP>
+    <HEADER>ВИД ФОТО</HEADER>
+    <PHOTOPATH>ПУТЬ ПО УМОЛЧАНИЮ К ФОТО</PHOTOPATH>
+    <ENTERPHOTOPATH>ВВЕДИТЕ ПУТЬ ПО УМОЛЧАНИЮ К ФОТО</ENTERPHOTOPATH>
+  </SETUP>
+</APPLANG>

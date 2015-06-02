@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<APPLANG>
+  <PHOTOVIEW>
+    <DESCRIPTION>שם</DESCRIPTION>
+    <DELETECONFIRM>האם אתה בטוח שברצונך למחוק את תמונה זו?</DELETECONFIRM>
+    <EDIT>מחק</EDIT>
+    <SETWALLPAPER>קבע כרקע</SETWALLPAPER>
+    <DISPLAYNAME>תמונות</DISPLAYNAME>
+    <THUMBSHEADER>צפייה בגדול</THUMBSHEADER>
+    <NOPATHSET>לא נכנס ערך בהגדרות</NOPATHSET>
+    <MYPHOTOS>התמונות שלי</MYPHOTOS>
+    <ROTATE>סבב</ROTATE>
+    <EMAILPHOTO>תמונת אימייל</EMAILPHOTO>
+    <SLIDESHOW>תצוגת שקופיות</SLIDESHOW>
+    <VIEW>מבט</VIEW>
+  </PHOTOVIEW>
+  <SETUP>
+    <HEADER>צפיית תמונות</HEADER>
+    <PHOTOPATH>כתובת תמונה ברירת מחדל</PHOTOPATH>
+    <ENTERPHOTOPATH>הכנס כתובת תמונה ברירת מחדל</ENTERPHOTOPATH>
+  </SETUP>
+</APPLANG>

@@ -1,0 +1,66 @@
+<SKIN id="AirFlow - Night" width="800" height="480" comment="PhotoView Plugin">
+  <IMAGES>
+    <IMAGE id="PhotoViewOff" path="photoview_off.png" />
+    <IMAGE id="PhotoViewDown" path="photoview_down.png" />
+  </IMAGES>
+  <SECTIONS>
+    <SECTION id="PhotoView" effect="ToApp" bounds="0;80;800;320" off="PhotoViewOff" down="PhotoViewDown">
+      <CONTROLS>
+        <CONTROL type="Label" id="ThumbsHeader" bounds="145;13;571;28" effect="" fontclass="MediaManagerLabel" text="AppLang.PhotoView.ThumbsHeader" fontstyle="align:left;size:26;style:bold" scroll="true" trimming="true" />
+        <CONTROL type="Label" id="ThumbsListCount" bounds="427;30;343;25" effect="" fontclass="MediaManagerLabel" fontstyle="align:right;size:20;style:bold" />
+        <CONTROL type="Button" id="Slideshow" bounds="22;84;108;72" effect="" cmlaction="Centrafuse.PhotoView.SlideShow" fontclass="Button16" fontstyle="size:11px;yoffset:20" textenable="False" text="Centrafuse.AppLang.Buttons.Slideshow" tabindex="2" />
+        <CONTROL type="Button" id="Email" bounds="22;163;108;72" effect="" cmlaction="Centrafuse.PhotoView.Email" fontclass="Button16" fontstyle="size:11px;yoffset:20" textenable="False" text="AppLang.PhotoView.EmailPhoto" tabindex="3" />
+        <CONTROL type="Button" id="Rotate" bounds="22;6;108;72" effect="" cmlaction="Centrafuse.PhotoView.Rotate" fontclass="Button16" fontstyle="size:11px;yoffset:20" textenable="False" text="AppLang.PhotoView.Rotate" tabindex="5" enabled="True" />
+        <CONTROL type="Button" id="DeleteMode" bounds="22;241;108;72" effect="" cmlaction="Centrafuse.PhotoView.Deletemode" fontclass="Button16" fontstyle="size:11px;yoffset:20" textenable="False" text="AppLang.PhotoView.Edit" tabindex="6" enabled="True" />
+        <CONTROL type="Button" id="PageUp" bounds="729;64;64;124" effect="" cmlaction="Centrafuse.PhotoView.PageUp" fontclass="Standard16" tabindex="5" />
+        <CONTROL type="Button" id="PageDown" bounds="729;188;64;124" effect="" cmlaction="Centrafuse.PhotoView.PageDown" fontclass="Standard16" tabindex="6" />
+        <CONTROL type="PictureBox" id="SlideshowBox" bounds="800;0;800;480" autoload="false" />
+        <CONTROL type="AdvancedList" id="MainPanel" bounds="141;68;587;240">
+          <LAYOUT>
+            <TEMPLATES>
+              <TEMPLATE id="default" selectable="true" layout="Floating" baseSize="576;240" scrollbarStyleId="Scrollbar">
+                <ITEMGROUP type="Default" size="144;120">
+                  <ITEM id="DisplayName" type="Text" position="5;95" size="120;10" dataSource="DisplayName" styleId="ImageName" />
+                  <ITEM id="ImageFile" type="Image" position="5;5" size="130;90" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="HLine" type="Image" position="0;119" size="143;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="VLine" type="Image" position="143;0" size="1;120" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+                <ITEMGROUP type="Selected" size="144;120">
+                  <ITEM id="Backgnd" type="Image" position="0;0" size="143;119" dataSource="cache:SelectionBar.png" styleId="Image.Fit" />
+                  <ITEM id="DisplayName" type="Text" position="5;95" size="120;10" dataSource="DisplayName" styleId="ImageName.Hi" />
+                  <ITEM id="ImageFile" type="Image" position="5;5" size="130;90" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="HLine" type="Image" position="0;119" size="143;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="VLine" type="Image" position="143;0" size="1;120" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+              </TEMPLATE>
+              <TEMPLATE id="deletemode" selectable="true" layout="Floating" baseSize="576;240" scrollbarStyleId="ScrollbarDelete">
+                <ITEMGROUP type="Default" size="144;120">
+                  <ITEM id="DisplayName" type="Text" position="5;95" size="120;10" dataSource="DisplayName" styleId="ImageName" />
+                  <ITEM id="ImageFile" type="Image" position="5;5" size="130;90" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="Delete" linkId="Delete" type="Image" position="45;25" size="50;50" dataSource="cache:delete_icon.png" styleId="Image.Fit" />
+                  <ITEM id="HLine" type="Image" position="0;119" size="143;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="VLine" type="Image" position="143;0" size="1;120" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+                <ITEMGROUP type="Selected" size="144;120">
+                  <ITEM id="Backgnd" type="Image" position="0;0" size="143;119" dataSource="cache:SelectionBar.png" styleId="Image.Fit" />
+                  <ITEM id="DisplayName" type="Text" position="5;95" size="120;10" dataSource="DisplayName" styleId="ImageName.Hi" />
+                  <ITEM id="ImageFile" type="Image" position="5;5" size="130;90" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="Delete" linkId="Delete" type="Image" position="35;15" size="70;70" dataSource="cache:delete_icon.png" styleId="Image.Fit" />
+                  <ITEM id="HLine" type="Image" position="0;119" size="143;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="VLine" type="Image" position="143;0" size="1;120" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+              </TEMPLATE>
+            </TEMPLATES>
+            <STYLES include=".\Skins\Fresh Air\listview\CommonStyles.xml">
+              <STYLE id="ImageName" color="#F0F8FF" hAlignment="Center" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="7" trimming="true" />
+              <STYLE id="ImageName.Hi" color="#000A17" hAlignment="Center" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="7" trimming="true" />
+            </STYLES>
+            <FONTS include=".\Skins\Fresh Air\listview\CommonFonts.xml">
+              <FONT id="7" name="Arial" size="13" style="Bold" />
+            </FONTS>
+          </LAYOUT>
+        </CONTROL>
+      </CONTROLS>
+    </SECTION>
+  </SECTIONS>
+</SKIN>

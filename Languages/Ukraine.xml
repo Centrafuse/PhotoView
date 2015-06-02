@@ -1,0 +1,21 @@
+﻿<APPLANG>
+  <PHOTOVIEW>
+    <DESCRIPTION>Display Name</DESCRIPTION>
+    <DELETECONFIRM>ARE YOU SURE YOU WANT TO REMOVE THIS PHOTO?</DELETECONFIRM>
+    <EDIT>Delete</EDIT>
+    <SETWALLPAPER>Set Wallpaper</SETWALLPAPER>
+    <DISPLAYNAME>ФОТО</DISPLAYNAME>
+    <THUMBSHEADER>ВИД ЕСКІЗУ</THUMBSHEADER>
+    <NOPATHSET>ШЛЯХ НЕ ЗАДАНО В ПАРАМЕТРАХ</NOPATHSET>
+    <MYPHOTOS>МОЇ ФОТО</MYPHOTOS>
+    <ROTATE>ОБЕРНУТИ</ROTATE>
+    <EMAILPHOTO>ФОТО ПОШТОЮ</EMAILPHOTO>
+    <SLIDESHOW>СЛАЙДШОУ</SLIDESHOW>
+    <VIEW>ВИГЛЯД</VIEW>
+  </PHOTOVIEW>
+  <SETUP>
+    <HEADER>ВИД ФОТО</HEADER>
+    <PHOTOPATH>ШЛЯХ ЗА ЗАМОВЧУВАННЯМ ДО ФОТО</PHOTOPATH>
+    <ENTERPHOTOPATH>ВВЕДІТЬ ШЛЯХ ЗА ЗАМОВЧУВАННЯМ ДО ФОТО</ENTERPHOTOPATH>
+  </SETUP>
+</APPLANG>

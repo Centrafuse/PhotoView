@@ -1,0 +1,69 @@
+<SKIN id="Clean" width="800" height="480" comment="PhotoView Plugin">
+  <IMAGES>
+    <IMAGE id="PhotoViewOff" path="photoview_off.png" />
+    <IMAGE id="PhotoViewDown" path="photoview_down.png" />
+  </IMAGES>
+  <SECTIONS>
+    <SECTION id="PhotoView" effect="ToApp" bounds="0;88;800;304" off="PhotoViewOff" down="PhotoViewDown">
+      <CONTROLS>
+        <CONTROL type="Label" id="ThumbsHeader" bounds="140;19;385;25" effect="" fontclass="Standard22" text="AppLang.PhotoView.ThumbsHeader" fontstyle="align:left;style:bold" />
+        <CONTROL type="Label" id="ThumbsListCount" bounds="517;20;70;25" effect="" fontclass="Standard20" fontstyle="align:right" />
+        <CONTROL type="Button" id="Slideshow" bounds="10;102;113;97" effect="" cmlaction="Centrafuse.PhotoView.SlideShow" fontclass="Button20" fontstyle="size:14px;yoffset:29" textenable="True" text="AppLang.PhotoView.Slideshow" tabindex="2" />
+        <CONTROL type="Button" id="View" bounds="10;6;113;95" effect="" cmlaction="Centrafuse.PhotoView.View" fontclass="Button20" fontstyle="size:14px;yoffset:29" textenable="True" text="AppLang.PhotoView.View" tabindex="1" />
+        <CONTROL type="Button" id="SetWallpaper" bounds="595;103;113;96" effect="" cmlaction="Centrafuse.PhotoView.SetWallpaper" fontclass="Button20" fontstyle="size:14px;yoffset:29" textenable="True" text="AppLang.PhotoView.SetWallpaper" tabindex="5" />
+        <CONTROL type="Button" id="Email" bounds="10;200;113;97" effect="" cmlaction="Centrafuse.PhotoView.Email" fontclass="Button20" fontstyle="size:14px;yoffset:29" textenable="True" text="AppLang.PhotoView.EmailPhoto" tabindex="3" />
+        <CONTROL type="Button" id="Rotate" bounds="595;8;113;94" effect="" cmlaction="Centrafuse.PhotoView.Rotate" fontclass="Button20" fontstyle="size:14px;yoffset:29" textenable="True" text="AppLang.PhotoView.Rotate" tabindex="4" enabled="True" />
+        <CONTROL type="Button" id="DeleteMode" bounds="595;200;113;97" effect="" cmlaction="Centrafuse.PhotoView.Deletemode" fontclass="Button20" fontstyle="size:14px;yoffset:29" textenable="True" text="AppLang.PhotoView.Edit" tabindex="6" enabled="True" />
+        <CONTROL type="Button" id="PageUp" bounds="709;8;81;145" effect="" cmlaction="Centrafuse.PhotoView.PageUp" forcemouseup="true" fontclass="Standard16" tabindex="7" />
+        <CONTROL type="Button" id="PageDown" bounds="709;153;81;145" effect="" cmlaction="Centrafuse.PhotoView.PageDown" forcemouseup="true" fontclass="Standard16" tabindex="8" />
+        <CONTROL type="PictureBox" id="SlideshowBox" bounds="800;0;800;480" autoload="false" />
+        <CONTROL type="AdvancedList" id="MainPanel" bounds="134;50;461;246">
+          <LAYOUT>
+            <TEMPLATES>
+              <TEMPLATE id="default" selectable="true" layout="Floating" baseSize="450;246" scrollbarStyleId="Scrollbar">
+                <ITEMGROUP type="Default" size="150;123">
+                  <ITEM id="DisplayName" type="Text" position="3;109" size="143;10" dataSource="DisplayName" styleId="ImageName" />
+                  <ITEM id="ImageFile" type="Image" position="3;3" size="143;100" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="Line" type="Image" position="0;122" size="150;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="Line2" type="Image" position="149;0" size="1;123" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+                <ITEMGROUP type="Selected" size="150;123">
+                  <ITEM id="Backgnd" type="Image" position="0;0" size="150;123" dataSource="cache:SelectionBar.png" styleId="Image.Fit" />
+                  <ITEM id="DisplayName" type="Text" position="3;109" size="143;10" dataSource="DisplayName" styleId="ImageName.Hi" />
+                  <ITEM id="ImageFile" type="Image" position="3;3" size="143;100" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="Line" type="Image" position="0;122" size="150;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="Line2" type="Image" position="149;0" size="1;123" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+              </TEMPLATE>
+              <TEMPLATE id="deletemode" selectable="true" layout="Floating" baseSize="450;246" scrollbarStyleId="Scrollbar">
+                <ITEMGROUP type="Default" size="150;123">
+                  <ITEM id="DisplayName" type="Text" position="3;109" size="143;10" dataSource="DisplayName" styleId="ImageName.Red" />
+                  <ITEM id="ImageFile" type="Image" position="3;3" size="143;100" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="Delete" linkId="Delete" type="Image" position="40;20" size="69;70" dataSource="cache:delete_icon.png" styleId="Image.Fit" />
+                  <ITEM id="Line" type="Image" position="0;122" size="150;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="Line2" type="Image" position="149;0" size="1;123" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+                <ITEMGROUP type="Selected" size="150;123">
+                  <ITEM id="Backgnd" type="Image" position="0;0" size="150;123" dataSource="cache:SelectionBar.png" styleId="Image.Fit" />
+                  <ITEM id="DisplayName" type="Text" position="3;109" size="143;10" dataSource="DisplayName" styleId="ImageName.Hi" />
+                  <ITEM id="ImageFile" type="Image" position="3;3" size="143;100" dataSource="ThumbPath{[value]}" styleId="Image.CC" />
+                  <ITEM id="Delete" linkId="Delete" type="Image" position="40;20" size="69;70" dataSource="cache:delete_icon.png" styleId="Image.Fit" />
+                  <ITEM id="Line" type="Image" position="0;122" size="150;1" dataSource="cache:Separator.png" styleId="Image.Fit" enabled="true" />
+                  <ITEM id="Line2" type="Image" position="149;0" size="1;123" dataSource="cache:Separator2.png" styleId="Image.Fit" enabled="true" />
+                </ITEMGROUP>
+              </TEMPLATE>
+            </TEMPLATES>
+            <STYLES include=".\Skins\Clean\listview\CommonStyles.xml">
+              <STYLE id="ImageName" color="#FFFFFF" hAlignment="Center" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="7" trimming="true" />
+              <STYLE id="ImageName.Red" color="#FF0000" hAlignment="Center" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="7" trimming="true" />
+              <STYLE id="ImageName.Hi" color="#000000" hAlignment="Center" vAlignment="Middle" leftIndent="0" rightIndent="0" fontId="7" trimming="true" />
+            </STYLES>
+            <FONTS include=".\Skins\Clean\listview\CommonFonts.xml">
+              <FONT id="7" name="Utsaah" size="13" style="Regular" />
+            </FONTS>
+          </LAYOUT>
+        </CONTROL>
+      </CONTROLS>
+    </SECTION>
+  </SECTIONS>
+</SKIN>
